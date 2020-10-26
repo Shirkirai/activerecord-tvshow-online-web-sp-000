@@ -14,4 +14,5 @@ class Show < ActiveRecord::Base
 
     def self.least_popular_show
         Show.where("rating > ?", 0).order(rating: :asc)
+    end
 end
